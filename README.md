@@ -1,5 +1,6 @@
 Requires a file named "config.js" that contains the following variables:
 
+```javascript
 var twitter_details = {
     consumer_key:         '',
     consumer_secret:      '',
@@ -18,6 +19,7 @@ var tumblr_details = {
     token: '',
     token_secret: ''
 };
+```
 
 Steps
 1. Put in your keys
