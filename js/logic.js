@@ -284,14 +284,13 @@ function shuffle(array) {
 function finished() {
     count++;
     if(count >= 3) { // All API calls finished
-        // Shuffle & show posts
-        posts = shuffle(posts);
-        addPosts();
-
         // Load map & word cloud
-        $("#loading").hide();
         mapLocations();
         createWordCloud();
+
+        // Shuffe & Show posts
+        posts = shuffle(posts);
+        addPosts();
     }
 }
 
@@ -320,8 +319,10 @@ function addPosts() {
         $("#posts").append(html);
     }
     
-    $("#posts").masonry({itemSelector: '.post'});
-    $("#posts").masonry();
+    $("#posts").imagesLoaded( function() {
+        $("#posts").masonry({itemSelector: '.post'});
+        $("#loading").hide();
+    });
 }
 
 /** Intializes everything is needed */
