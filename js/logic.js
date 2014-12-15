@@ -1,5 +1,3 @@
-var domain = "localhost";
-var port = "3000";
 var api_url = "/api/";
 var count;
 var map;
@@ -342,4 +340,8 @@ function init() {
     var query = $("#search").val();
     search(query);
 }
-init();
+$(document).ready(function() {
+    init();    
+});
+
+
