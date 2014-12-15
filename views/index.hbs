@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Institute for Culture and Society</title>
+
+	<!-- Styles -->
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+	<!-- JavaScript -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/masonry.min.js"></script>
+    <script src="../js/d3.js"></script>
+    <script src="../js/d3.layout.cloud.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCObElxUnfbHvrHhAvO2jodwJJlLVBYePI"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header">
+        <h1 class="center">Institute for Culture and Society</h1>
+        <input id="search" class="center" autocomplete="false" placeholder="Search term" value="AppreciateAMate">
+        <img id="loading" src="http://admin.houseandland.com.au/themes/houseandland/images/loading-animate.gif">
+    </div>
+    
+    <!-- Map -->
+    <section>
+        <div id="map"></div>
+    </section>
+    
+    <!-- Cloud -->
+    <section>
+        <svg id="wordcloud"></svg>
+    </section>
+    
+    <!-- Posts -->
+    <section>
+        <div id="posts"></div>
+    </section>
+
+    <!-- Logic -->
+    <script type="text/javascript" language="javascript" src="../js/logic.js"></script>
+</body>
+</html>

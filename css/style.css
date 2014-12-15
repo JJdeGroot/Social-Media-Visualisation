@@ -1,0 +1,148 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    background-color: #B0CEFE;
+}
+
+/** Headers */
+h1, h2, h3 {
+    padding: 5px;
+    margin: 0px;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.center {
+    text-align: center;   
+}
+
+.none {
+    text-decoration: none;  
+    color: #000;
+}
+
+/** Search */
+#search {
+    display: block;
+    font-size: 1em;
+    height: 2em;
+    
+    border: 1px solid white;
+    border-radius: 10px;
+    outline: none;
+    width: 25%;
+    margin: 0px auto;
+}
+
+#loading {
+    display: block;
+    margin: 0 auto;
+    max-height: 50px;
+    padding: 5px;
+}
+
+
+
+/** Sections */
+section {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/** Map */
+#map {
+    width: 100%;
+    height: 50%;
+}
+
+/** Wordcloud */
+#wordcloud {
+    width: 100%;
+    height: 50%;
+}
+
+/** Posts */
+#posts {
+    margin-top: 0px;   
+}
+
+/** Post */
+.post {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+
+    width: calc(21% - 2px);
+    margin: 10px 1% 1% 1%;
+    padding: 1%;
+    border-radius: 5px;
+    
+    background-color: #B0CEFE;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.post .name {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.post .text {
+    display: block;
+    font-style: italic;  
+    word-break: break-all;
+}
+
+.post .image {
+    display: block;
+    margin: 0 auto;
+    max-width: 75%;
+    max-height: 75%;
+}
+
+/*
+.twitter {
+    background-color: rgba(150, 0, 0, .05);
+}
+
+.instagram {
+    background-color: rgba(0, 255, 0, .05);
+}
+
+.tumblr {
+    background-color: rgba(0, 0, 255, .05);
+}
+*/
+
+@media (min-width: 600px) and (max-width: 800px) {
+    #search {
+        width: 40%;
+    }
+    .post {
+        width: calc(29.3% - 2px); /* 3 columns */
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    #search {
+        width: 60%;
+    }
+    .post {
+        width: calc(46% - 2px); /* 2 columns */
+    }
+}
+
+@media (max-width: 400px) {
+    #search {
+        width: 80%;
+    }
+    .post {
+        width: calc(96% - 2px); /* 1 column */
+    }
+}
+

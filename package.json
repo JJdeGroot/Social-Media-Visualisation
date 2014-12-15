@@ -1,0 +1,13 @@
+{
+  "name": "Visualisation",
+  "version": "0.0.1",
+  "description": "Visualisizing Social Media for the Institute for Culture and Society",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "hbs": "*",
+    "twit": "1.x",
+    "instagram-node": "0.5.x",
+    "tumblr": "0.4.x"
+  }
+}
