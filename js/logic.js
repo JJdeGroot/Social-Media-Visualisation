@@ -1,6 +1,6 @@
 var domain = "localhost";
 var port = "3000";
-var api_url = "http://"+domain+":"+port+"/api/";
+var api_url = "/api/";
 var count;
 var map;
 var msnry;
