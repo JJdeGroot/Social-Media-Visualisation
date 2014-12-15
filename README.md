@@ -9,24 +9,28 @@ I needed to show the impact of the Appreciate A Mate app by using Social Media. 
 
 *"config.js"*
 ```javascript
-var twitter_details = {
-    consumer_key:         '',
-    consumer_secret:      '',
-    access_token:         '',
-    access_token_secret:  ''
-};
+var Credentials = {
+    twitter: {
+        consumer_key:         '',
+        consumer_secret:      '',
+        access_token:         '',
+        access_token_secret:  ''
+    },
 
-var instagram_details = { 
-    client_id: '',
-    client_secret: '' 
-};
+    instagram: { 
+        client_id: '',
+        client_secret: '' 
+    },
 
-var tumblr_details = {
-    consumer_key: '',
-    consumer_secret: '',
-    token: '',
-    token_secret: ''
-};
+    tumblr: {
+        consumer_key: '',
+        consumer_secret: '',
+        token: '',
+        token_secret: ''
+    }
+}
+
+module.exports = Credentials
 ```
 
 

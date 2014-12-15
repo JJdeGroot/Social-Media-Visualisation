@@ -1,8 +1,10 @@
 // Requirements
 var express = require('express'),// Express
     path = require('path'),      // Path
-    details = require('config'); // Configuration files
+    credentials = require('./config.js'); // Configuration files
  
+console.log(credentials.twitter)
+
 // App configuration
 var app = express();
 app.use("/css", express.static(__dirname + '/css'));
@@ -31,7 +33,7 @@ app.get('/api', function (req, res) {
 
 /** TWITTER API */
 var Twit = require('twit');
-var T = new Twit(twitter_details);
+var T = new Twit(credentials.twitter);
 
 // Twitter search
 app.get('/api/twitter/:q', function (req, res) {
@@ -45,7 +47,7 @@ app.get('/api/twitter/:q', function (req, res) {
 /** INSTAGRAM API */
 var ig = require('instagram-node').instagram();
 ig.use({ access_token: '*' });
-ig.use(instagram_details);
+ig.use(credentials.instagram);
 
 // Instagram search
 app.get('/api/instagram/:q', function (req, res) {
@@ -58,7 +60,7 @@ app.get('/api/instagram/:q', function (req, res) {
 
 /** TUMBLR API */
 var tumblr = require('tumblr');
-var tagged = new tumblr.Tagged(tumblr_details);
+var tagged = new tumblr.Tagged(credentials.tumblr);
 
 // Tumblr search
 app.get('/api/tumblr/:q', function(req, res) {
